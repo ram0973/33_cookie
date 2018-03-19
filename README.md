@@ -11,11 +11,15 @@ cd static/
 python3 -m http.server
 ```
 
-Open page [127.0.0.1:8000](http://127.0.0.1:8000) in browser.
+Open page [localhost:9000](http://localhost:9000) in browser.
 
 # Deploy on production server
 
 [TODO. Deploy scripts will written later]
+
+# Use
+
+First you must register yourself, after that you will be able to view cars list.
 
 # Project Goals
 
