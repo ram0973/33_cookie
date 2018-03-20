@@ -2,7 +2,6 @@
   <div class="header clearfix">
     <nav>
       <ul class="nav nav-pills pull-right">
-        <!-- TODO вынести шапку в riot tag и добавить логику -->
         <li each={ navItems } role="presentation" class={ active: active } onclick={ toggle }>
           <a href="{ url }">{ title }</a>
         </li>
@@ -15,9 +14,14 @@
     this.navItems = opts.navItems
 
     toggle(e) {
-      var item = e.item
-      item.active = !item.active
-      return true
+      var currentItem = e.item
+      this.navItems.forEach((item) => {
+            if (item.view == currentItem.view) {
+                item.active = true;
+            } else {
+                item.active = false;
+            }
+        });
     }
   </script>
 </header>
