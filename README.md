@@ -17,7 +17,7 @@ Open page [localhost:9000](http://localhost:9000) in browser.
 
 [TODO. Deploy scripts will be written later]
 
-# Use
+# Usage
 
 First you must register yourself, after that you will be able to view cars list.
 

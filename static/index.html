@@ -131,6 +131,8 @@
       <h3 class="text-muted">ПомойАвто</h3>
     </div>
 
+    <header></header>
+
     <div id="page-container"></div>
 
     <footer class="footer">
@@ -143,6 +145,7 @@
   <!-- custom riot tags -->
   <script type="riot/tag" src="/pages/signup-page.tag.html"></script>
   <script type="riot/tag" src="/pages/cars-page.tag.html"></script>
+  <script type="riot/tag" src="/pages/header.tag.html"></script>
 
   <script src="/vendor/navigo.js"></script><!-- router -->
   <script src="/vendor/fetch.js"></script><!-- uses isomorfic fetch for IE support -->
@@ -157,6 +160,15 @@
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/riot@3.6/riot+compiler.min.js"></script>
+
+  <script>
+    riot.mount('header', {
+      navItems: [
+        { title: 'Мои автомобили', active: true, url: '#/', view : 'home' },
+        { title: 'Регистрация',  active: false, url: "#/signup", view : 'signup' },
+      ]
+    })
+  </script>
   <script>
   function main(){
     var mountPoint = document.getElementById('page-container')
